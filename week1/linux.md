@@ -23,12 +23,12 @@ whoami
 Ejemplo de script simple para validar si estas usuando el usuario root
 
 ```
-cat << whoami.sh >> EOF
+cat << EOF > whoami.sh
 #!/bin/bash
-if [ "$(whoami)" = "root" ]; then
-    echo "Tienes sesion con el usuario root"
+if [ "\$(whoami)" = "root" ]; then
+    echo "Tienes sesión con el usuario root"
 else
-    echo "No tienes sesion con usuario root, estas con el usuario '$(whoami)'"
+    echo "No tienes sesión con el usuario root, estás con el usuario '\$(whoami)'"
 fi
 EOF
 ```
