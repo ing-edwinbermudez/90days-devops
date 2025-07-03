@@ -9,7 +9,7 @@ El comando `uname -a` en sistemas Unix/Linux muestra información detallada del 
 ```markdown
 uname -a
 ```
-![alt text](image.png)
+![alt text](images/day1/image.png)
 
 ## 💾 **whoami**
 
@@ -18,7 +18,7 @@ El comando `whoami` en sistemas Unix/Linux (y también en Windows) muestra **el 
 ```markdown
 whoami
 ```
-![alt text](image-1.png)
+![alt text](images/day1/image-1.png)
 
 Ejemplo de script simple para validar si estas usuando el usuario root
 
@@ -58,7 +58,7 @@ uptime -p
 ```
 uptime -s
 ```
-![alt text](image-3.png)
+![alt text](images/day1/image-3.png)
 
 
 ## 💾 **top**
@@ -112,7 +112,7 @@ Dentro de `top` puedes:
 - Presionar `1` para ver el uso de CPU por núcleo.                  |
 
 
-![alt text](image-4.png)
+![alt text](images/day1/image-4.png)
 
 ## 💾 free -h
 
@@ -141,10 +141,10 @@ Muestra en MB
  free -m
  ```
 
-![alt text](image-5.png)
+![alt text](images/day1/image-5.png)
 
 Actualiza cada 5 segundos (útil para monitoreo)
 ```
 free -s 5 -h
 ```
-![alt text](image-6.png)
+![alt text](images/day1/image-6.png)
