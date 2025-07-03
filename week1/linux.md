@@ -2,7 +2,7 @@
 
 # Comandos en Linux
 
-## 💾 **uname**
+## 💾 comando `uname`
 
 El comando `uname -a` en sistemas Unix/Linux muestra información detallada del sistema operativo. La opción `-a` (abreviación de all) muestra toda la información disponible.
 
@@ -11,7 +11,7 @@ uname -a
 ```
 ![alt text](images/day1/image.png)
 
-## 💾 **whoami**
+## 💾 comando `whoami`
 
 El comando `whoami` en sistemas Unix/Linux (y también en Windows) muestra **el nombre del usuario actualmente autenticado** en la sesión del terminal.
 
@@ -43,7 +43,7 @@ Ejecutar el script
 ./whoami.sh
 ```
 
-## 💾 **uptime**
+## 💾 comando `uptime`
 
 El comando `uptime` en Linux/Unix muestra información sobre **cuánto tiempo lleva encendido el sistema**, así como la **carga promedio del CPU**.
 
@@ -61,7 +61,7 @@ uptime -s
 ![alt text](images/day1/image-3.png)
 
 
-## 💾 **top**
+## 💾 comando `top`
 
 El comando `top` muestra en **tiempo real** información sobre el uso del sistema, como:
 
@@ -114,7 +114,7 @@ Dentro de `top` puedes:
 
 ![alt text](images/day1/image-4.png)
 
-## 💾 free -h
+## 💾 comando `free`
 
 Muestra un resumen del uso de la **memoria RAM** y **memoria swap** del sistema, en un formato legible para humanos.
 
@@ -148,3 +148,47 @@ Actualiza cada 5 segundos (útil para monitoreo)
 free -s 5 -h
 ```
 ![alt text](images/day1/image-6.png)
+
+## 💽 Comando `df`
+
+El comando `df` (disk free) muestra información sobre el **uso del espacio en disco** de los sistemas de archivos montados.
+
+```
+df -h
+```
+
+## 📊 Explicación de columnas del comando `df -h`
+
+| Columna      | Descripción                                                                 |
+|--------------|------------------------------------------------------------------------------|
+| `Filesystem` | Sistema de archivos o dispositivo (ej. `/dev/sda1`).                        |
+| `Size`       | Tamaño total del sistema de archivos.                                       |
+| `Used`       | Espacio utilizado actualmente.                                              |
+| `Avail`      | Espacio disponible para nuevos archivos.                                    |
+| `Use%`       | Porcentaje de uso del espacio.                                              |
+| `Mounted on` | Punto de montaje del sistema de archivos (ej. `/`, `/home`). 
+
+---
+
+El comando `df -i` muestra el **uso de inodos** en lugar del uso de espacio en disco.
+
+Un **inodo** es una estructura de datos del sistema de archivos que almacena información sobre archivos y directorios (no su contenido).  
+Por lo tanto, si se agotan los inodos, **no podrás crear más archivos**, incluso si todavía hay espacio en disco disponible.
+
+```
+df -i
+```
+![alt text](images/day1/image-7.png)
+
+📊 Explicación de columnas del comando `df -i`
+
+| Columna      | Descripción                                                                 |
+|--------------|------------------------------------------------------------------------------|
+| `Filesystem` | Sistema de archivos o dispositivo (ej. `/dev/sda1`).                        |
+| `Inodes`     | Número total de inodos disponibles en ese sistema de archivos.              |
+| `IUsed`      | Inodos en uso, es decir, la cantidad de archivos/carpetas existentes.       |
+| `IFree`      | Inodos libres aún disponibles para crear archivos/directorios.              |
+| `IUse%`      | Porcentaje de inodos usados (`IUsed / Inodes`).                             |
+| `Mounted on` | Punto de montaje donde está montado ese sistema de archivos (ej. `/`, `/home`, etc.). |
+
+![alt text](images/day1/image-2.png)
